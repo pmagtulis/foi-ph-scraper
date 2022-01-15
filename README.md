@@ -5,8 +5,8 @@ A scraper for the Freedom of Information portal of the Philippine government.
 
 # What is this?
 
-This code scrapes and processes requests data from the Philippines' [Freedom of Information website](www.foi.gov.ph). The goal is to create a single 
-database of these requests in a data frame and make some analysis out of them such as:
+This code scrapes and processes requests data from the Philippines' [Freedom of Information website](www.foi.gov.ph). The goal is to create a single database of 
+these requests in a data frame and make some analysis out of them such as:
 
 Which agency received the most number of requests?
 
@@ -29,7 +29,9 @@ public disclosures.
 # The process
 
 1. Using Selenium, we scraped one part of the FOI website which contains a live list of [requests](www.foi.gov.ph/requests). We specifically scraped 
-the tab labeled "ALL REQUESTS."
+the contents of the tab labeled "ALL REQUESTS." Below is a screenshot of that page and an example of how each requests data is structured:
+
+<img width="681" alt="Screen Shot 2022-01-15 at 6 31 50 PM" src="https://user-images.githubusercontent.com/87161563/149641061-726ec0c6-1f68-4ddc-b4a5-ad01f4e132f5.png">
 
 2. We put all scraped information in a single data frame for processing through pandas.
 
