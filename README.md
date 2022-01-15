@@ -64,3 +64,5 @@ however appeared to contain only data from **December 7, 2021** onwards. The web
 
 2. That said, there are three more tabs that filter according to **successful, pending and denied requests** which appear to have older data. Future project
 may focus on scraping these tabs as well, and merging with the current data, while discounting potential duplicates.
+
+**Comments and suggestions are always welcome! All rights reserved.**
