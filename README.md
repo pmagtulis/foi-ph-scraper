@@ -35,6 +35,8 @@ the tab labeled "ALL REQUESTS."
 
 3. We made some initial analysis while the project is constantly **evolving and being developed.**
 
+4. Raw scraped files are then saved into CSV format.
+
 # Definition of terms
 
 The following information were scraped from the website (labeled as in the **df**).:
