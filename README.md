@@ -34,10 +34,15 @@ the tab labeled "ALL REQUESTS."
 2. The following information were scraped from the website:
 
       a. The filer's name
+      
       b. The name of the agency where the request was submitted
+      
       c. Date of request
-      d. Title of the request (usually providing a brief indication of what type of information is being requested).
+      
+      d. Title of the request (usually providing a brief indication of what type of information is being requested)
+
       e. Purpose of the request
+      
       f. Link to each request (which contains details and direct messages between the filer and agency concerned).
 
 3. 
