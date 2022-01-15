@@ -31,23 +31,25 @@ public disclosures.
 1. Using Selenium, we scraped one part of the FOI website which contains a live list of [requests](www.foi.gov.ph/requests). We specifically scraped 
 the tab labeled "ALL REQUESTS."
 
-2. The following information were scraped from the website:
+2. We put all scraped information in a single data frame for processing through pandas.
 
-      a. The filer's name
-      
-      b. The name of the agency where the request was submitted
-      
-      c. Date of request
-      
-      d. Title of the request (usually providing a brief indication of what type of information is being requested)
+3. We made some initial analysis while the project is constantly **evolving and being developed.**
 
-      e. Purpose of the request
+# Definition of terms
+
+The following information were scraped from the website (labeled as in the **df**).:
+
+1. **filer** - the name of the filer of FOI request. Most often containing only the initials of the first name and entire last name.
       
-      f. Link to each request (which contains details and direct messages between the filer and agency concerned).
+2. **agency** - the name of the government agency where the request was submitted.
+      
+3. **date** - date when request was made through the FOI portal.
+      
+4. **title** - title of the request (usually providing a brief indication of what type of information is being requested).
 
-3. We put all scraped information in a single data frame for processing through pandas.
-
-4. We made some initial analysis while the project is constantly **evolving and being developed.**
+5. **purpose** - the purpose why the request is being made, typically indicating how the data will be used. This is required when filing an FOI request.
+      
+6. **link** - a hyperlink to each FOI request, containing details and direct messages between the filer and agency concerned.
 
 # Some caveats
 
