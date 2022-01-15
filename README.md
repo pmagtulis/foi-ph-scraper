@@ -54,5 +54,7 @@ the tab labeled "ALL REQUESTS."
 1. While the primary intention on scraping the FOI website was to get as much information from it worthy of historical analysis, the ALL REQUESTS tab
 however appeared to contain only data from **December 7, 2021** onwards. The website shows the photo below after reaching a certain page.
 
+<img width="1200" alt="Screen Shot 2022-01-13 at 4 51 14 PM" src="https://user-images.githubusercontent.com/87161563/149607477-4a973191-86a5-4e68-8dfa-737bb1993697.png">
+
 2. That said, there are three more tabs that filter according to **successful, pending and denied requests** which appear to have older data. Future project
 may focus on scraping these tabs as well, and merging with the current data, while discounting potential duplicates.
