@@ -41,19 +41,16 @@ the contents of the tab labeled "ALL REQUESTS." Below is a screenshot of that pa
 
 # Definition of terms
 
-The following information were scraped from the website (labeled as in the **df**).:
+The following information were scraped from the website (labeled as in the **df**)
 
-1. **filer** - the name of the filer of FOI request. Most often containing only the initials of the first name and entire last name.
-      
-2. **agency** - the name of the government agency where the request was submitted.
-      
-3. **date** - date when request was made through the FOI portal.
-      
-4. **title** - title of the request (usually providing a brief indication of what type of information is being requested).
-
-5. **purpose** - the purpose why the request is being made, typically indicating how the data will be used. This is required when filing an FOI request.
-      
-6. **link** - a hyperlink to each FOI request, containing details and direct messages between the filer and agency concerned.
+|column name|definition|
+|---|---|
+|**filer**|the name of the filer of FOI request. Most often containing only the initials of the first name and entire last name|
+|**agency**|the name of the government agency where the request was submitted| 
+|**date**|date when request was made through the FOI portal|  
+|**title**|title of the request (usually providing a brief indication of what type of information is being requested)|
+|**purpose**|the purpose why the request is being made, typically indicating how the data will be used. This is required when filing an FOI request|     
+|**link**|hyperlink to each FOI request, containing details and direct messages between the filer and agency concerned|
 
 # Some caveats
 
