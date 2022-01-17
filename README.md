@@ -51,6 +51,7 @@ The following information were scraped from the website (labeled as in the **df*
 |**title**|title of the request (usually providing a brief indication of what type of information is being requested)|
 |**purpose**|the purpose why the request is being made, typically indicating how the data will be used. This is required when filing an FOI request|     
 |**link**|hyperlink to each FOI request, containing details and direct messages between the filer and agency concerned|
+|**tracking no.**|a unique identifier to assigned by the FOI portal to each request|
 
 # Some caveats
 
