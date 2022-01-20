@@ -6,7 +6,7 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 # Recent updates
 |column name|definition|
 |---|---|
-|*Jan 20*|overhauled the file to upload only a Python file (not Jupyter Notebook); removed the analysis part and activated an auto-scraper every Sunday| 
+|*Jan 20*|overhauled the file to upload a Python file for auto scraping purposes; removed the analysis part and activated an auto-scraper every Sunday| 
 
 # What is this?
 
