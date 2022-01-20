@@ -1,7 +1,7 @@
 # foi-ph-scraper
 An automatic scraper for the Freedom of Information portal of the Philippine government.
 
-**Data from publicly available records from December 7, 2021 onwards**
+**Data from publicly available records from December 7, 2021 onwards (when first scraped, can change since some older files in website are periodically removed)**
 
 # Recent updates
 |column name|definition|
@@ -11,7 +11,7 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 # What is this?
 
 This code scrapes requests data from the Philippines' [Freedom of Information website](www.foi.gov.ph). We use a Python code as well to automatically scrape the
-website for new information **every Sunday** and saves that new file into a CSV **(this component currently being polished)**.
+website for new information **every Sunday** and saves that new file into a CSV **(this component currently being debugged)**.
 
 The goal is to create a single database of these requests in a data frame and make some analysis out of them such as:
 
