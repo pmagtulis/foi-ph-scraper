@@ -7,9 +7,9 @@
    "source": [
     "# Philippines' Freedom of Information website scraper and analysis\n",
     "\n",
-    "**(Data from September 2016-January 19 and ongoing)**\n",
+    "**(Data from December 7, 2021 and ongoing)**\n",
     "\n",
-    "Below scrapes and processes requests data from the Philippines' Freedom of Information website **(www.foi.gov.ph)** and combining the same with an **existing file** of **older FOI requests from 2016.** \n",
+    "Below scrapes and processes requests data from the Philippines' Freedom of Information website **(www.foi.gov.ph)**.\n",
     "\n",
     "The goal is to create a single database of these requests (which we will do in a separate notebook) and analyze them such as:\n",
     "\n",
@@ -360,7 +360,9 @@
    "source": [
     "So, some caveats:\n",
     "\n",
-    "First, the **ALL REQUESTS** tab apparently only contains data for about the past 40 or so days (in this case from **December 7, 2021**). Hence, we can only scrape until that level-- that represent only or **about 6%** of what the website says as **\"93,373 requests\"**."
+    "First, the **ALL REQUESTS** tab apparently only contains data for about the past 40 or so days (in this case from **December 7, 2021**). Hence, we can only scrape until that level-- that represent only or **about 6%** of what the website says as **\"93,373 requests\"**.\n",
+    "\n",
+    "We will use this file however to combine with a larger set of requests in **another notebook**."
    ]
   },
   {
@@ -595,13 +597,21 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "id": "f5016969",
+   "metadata": {},
+   "source": [
+    "# Save to CSV"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": 13,
    "id": "c23996a2",
    "metadata": {},
    "outputs": [],
    "source": [
-    "df.to_csv(\"foi1.csv\", index=False)\n",
+    "df.to_csv(\"output/foi1.csv\", index=False)\n",
     "pd.read_csv(\"foi1.csv\")"
    ]
   }
