@@ -48,7 +48,7 @@ the contents of the tab labeled "ALL REQUESTS." Below is a screenshot of that pa
 
 # Definition of terms
 
-The following information were scraped from the website (labeled as in the **df**)
+The following information were scraped from the website:
 
 |column name|definition|
 |---|---|
