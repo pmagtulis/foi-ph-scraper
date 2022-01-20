@@ -68,7 +68,7 @@ The following information were scraped from the website (labeled as in the **df*
 which manages the website. The PCOO said they sometimes older remove requests data from the FOI website at the request of the filer. **It was not clear however
 if the agency also conducts regular cleaning of the portal to remove aging files.**
 
-3. As a result of limited data in the website, the message below appears upon reaching the end of the **"BROWSE ALL REQUESTS"** tab which is the portion of the 
+3. As a result of limited data in the website, the message below appears upon reaching the end of the **"ALL REQUESTS"** tab which is the portion of the 
 site scraped. The code is designed not to break even after this.
 
 <img width="1200" alt="Screen Shot 2022-01-13 at 4 51 14 PM" src="https://user-images.githubusercontent.com/87161563/149607477-4a973191-86a5-4e68-8dfa-737bb1993697.png">
