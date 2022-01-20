@@ -1,12 +1,19 @@
 # foi-ph-scraper
-A scraper for the Freedom of Information portal of the Philippine government.
+An automatic scraper for the Freedom of Information portal of the Philippine government.
 
 **Data from publicly available records from December 7, 2021 onwards**
 
+# Recent updates
+|column name|definition|
+|---|---|
+|*Jan 20*|overhauled the file to upload only a Python file (not Jupyter Notebook); removed the analysis part and activated an auto-scraper every Sunday| 
+
 # What is this?
 
-This code scrapes and processes requests data from the Philippines' [Freedom of Information website](www.foi.gov.ph). The goal is to create a single database of 
-these requests in a data frame and make some analysis out of them such as:
+This code scrapes requests data from the Philippines' [Freedom of Information website](www.foi.gov.ph). We use a Python code as well to automatically scrape the
+website for new information **every Sunday** and saves that new file into a CSV **(this component currently being polished)**.
+
+The goal is to create a single database of these requests in a data frame and make some analysis out of them such as:
 
 Which agency received the most number of requests?
 
@@ -45,23 +52,26 @@ The following information were scraped from the website (labeled as in the **df*
 
 |column name|definition|
 |---|---|
-|**filer**|the name of the filer of FOI request. Most often containing only the initials of the first name and entire last name|
 |**agency**|the name of the government agency where the request was submitted| 
+|**date**|date when request was made through the FOI portal|
+|**status**|shows at which stage of the FOI process is the file request in. Examples are "SUCCESSFUL", "PARTIALLY SUCCESSFUL", "DENIED", etc.|
 |**date**|date when request was made through the FOI portal|  
-|**title**|title of the request (usually providing a brief indication of what type of information is being requested)|
+|**period_covered**|a required information when filing a request meant to serve as filter for the extent of period covered by each request|
 |**purpose**|the purpose why the request is being made, typically indicating how the data will be used. This is required when filing an FOI request|     
 |**link**|hyperlink to each FOI request, containing details and direct messages between the filer and agency concerned|
-|**tracking no.**|a unique identifier assigned by the FOI portal to each request|
 
-# Some caveats
+# Next steps
 
-1. While the primary intention on scraping the FOI website was to get as much information from it worthy of historical analysis, the ALL REQUESTS tab
-however appeared to contain only data from **December 7, 2021** onwards. The website shows the photo below after reaching a certain page.
+1. After running this code and getting the latest requests information from the FOI website, the entire file is saved into a CSV format. 
+
+2. Proceed to the next notebook titled "foi-analysis" for next steps: including merging the data with older ones from another CSV file, courtesy of the PCOO,
+which manages the website. The PCOO said they sometimes older remove requests data from the FOI website at the request of the filer. **It was not clear however
+if the agency also conducts regular cleaning of the portal to remove aging files.**
+
+3. As a result of limited data in the website, the message below appears upon reaching the end of the **"BROWSE ALL REQUESTS"** tab which is the portion of the 
+site scraped. The code is designed not to break even after this.
 
 <img width="1200" alt="Screen Shot 2022-01-13 at 4 51 14 PM" src="https://user-images.githubusercontent.com/87161563/149607477-4a973191-86a5-4e68-8dfa-737bb1993697.png">
-
-2. That said, there are three more tabs that filter according to **successful, pending and denied requests** which appear to have older data. Future project
-may focus on scraping these tabs as well, and merging with the current data, while discounting potential duplicates.
 
 # Contact
 
