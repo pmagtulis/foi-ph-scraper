@@ -148,33 +148,6 @@
   },
   {
    "cell_type": "markdown",
-   "id": "e94445c1",
-   "metadata": {},
-   "source": [
-    "Used **BeautifulSoup** on this part just because I want to clearly see the elements I need to **isolate**."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 5,
-   "id": "3e39c546",
-   "metadata": {
-    "scrolled": true
-   },
-   "outputs": [],
-   "source": [
-    "my_url = \"https://www.foi.gov.ph/requests\"\n",
-    "foi_html = requests.get(my_url).content\n",
-    "#print(type(foi_html))\n",
-    "#print(foi_html)\n",
-    "\n",
-    "#foi_list = BeautifulSoup(foi_html, \"html.parser\")\n",
-    "#print(type(foi_list))\n",
-    "#print(foi_list.prettify())"
-   ]
-  },
-  {
-   "cell_type": "markdown",
    "id": "994bc1b4",
    "metadata": {},
    "source": [
