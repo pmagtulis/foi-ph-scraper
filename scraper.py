@@ -151,6 +151,6 @@ df
 # In[13]:
 
 
-df.to_csv("output/foi2.csv", index=False)
+df.to_csv("foi2.csv", index=False)
 pd.read_csv("foi2.csv")
 
