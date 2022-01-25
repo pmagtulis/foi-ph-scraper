@@ -1,8 +1,6 @@
 # foi-ph-scraper
 An automatic scraper for the Freedom of Information portal of the Philippine government.
 
-**Data from publicly available records from December 7, 2021 onwards (when first scraped, can change since some older files in website are periodically removed)**
-
 # Recent updates
 |column name|definition|
 |---|---|
