@@ -27,28 +27,35 @@ import pandas as pd
 import time
 import requests
 import re
-
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
+from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.utils import ChromeType
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+
+chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+
+chrome_options = Options()
+options = [
+    "--headless",
+    "--disable-gpu",
+    "--window-size=1920,1200",
+    "--ignore-certificate-errors",
+    "--disable-extensions",
+    "--no-sandbox",
+    "--disable-dev-shm-usage"
+]
+for option in options:
+    chrome_options.add_argument(option)
+
+driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
 from bs4 import BeautifulSoup
 
 
-# ## Open a new browser to be automatically controlled by Selenium
-
 # In[2]:
-
-
-driver = webdriver.Chrome(ChromeDriverManager().install())
-
-
-# In[3]:
 
 
 driver.get("https://www.foi.gov.ph/requests")
@@ -70,7 +77,7 @@ driver.get("https://www.foi.gov.ph/requests")
 # 
 # By.CSS_SELECTOR
 
-# In[4]:
+# In[3]:
 
 
 tabs = driver.find_elements(By.CLASS_NAME, "col-xxs-12 col-xs-12 col-sm-8")
@@ -78,7 +85,7 @@ tabs = driver.find_elements(By.CLASS_NAME, "col-xxs-12 col-xs-12 col-sm-8")
 
 # Used **BeautifulSoup** on this part just because I want to clearly see the elements I need to **isolate**.
 
-# In[5]:
+# In[4]:
 
 
 my_url = "https://www.foi.gov.ph/requests"
@@ -97,7 +104,7 @@ foi_html = requests.get(my_url).content
 # 
 # Kudos to my friend, Vincent, for some help in using **CSS_SELECTOR** as a locator since I'm not familiar with it.
 
-# In[6]:
+# In[5]:
 
 
 dataset = []
@@ -141,14 +148,14 @@ while True:
 # 
 # First, the **ALL REQUESTS** tab apparently only contains data for about the past 40 or so days (in this case from **December 7, 2021**). Hence, we can only scrape until that level-- that represent only or **about 6%** of what the website says as **"93,373 requests"**.
 
-# In[7]:
+# In[6]:
 
 
 df = pd.DataFrame(dataset)
 df
 
 
-# In[13]:
+# In[7]:
 
 
 df.to_csv("foi2.csv", index=False)
