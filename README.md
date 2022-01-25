@@ -15,7 +15,7 @@ Follow the steps below, but an additional note: the site removes old data period
 requests. To avoid the risk of overwriting older CSVs generated, I suggest that CSV's be saved everytime the scraper runs (while I figure out how to generate new
 CSVs in pandas whenever files are saved. 
 
-Currently, **foi(2016-Dec20).csv** contains scraped data from stipulated period. But **foi2.csv** contains only from January 20 to 25.
+Currently, **foi(2016-Jan20).csv** contains scraped data from stipulated period. But **foi2.csv** contains only from January 20 to 25.
 
 # What is this?
 
