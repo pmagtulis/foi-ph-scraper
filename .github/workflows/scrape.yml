@@ -1,8 +1,6 @@
 name: scrape
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '5 8 * * 0'
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -13,8 +11,10 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
+      - name: Install software
+        run: sudo apt-get install -y chromium-browser
       - name: Install all necessary packages
-        run: pip install requests beautifulsoup4 pandas selenium regex webdriver-manager chromedriver
+        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium regex
       - name: Run the scraping script
         run: python scraper.py
       - name: Commit and push if content changed
