@@ -6,7 +6,7 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 # Recent updates
 |column name|definition|
 |---|---|
-|*Jan 24*|resolved issues on scraper through the help of [jsoma's code](https://github.com/jsoma/selenium-github-actions) code. New CSV generated as of January 25 containing files from January 20 onwards.|
+|*Jan 24*|resolved issues on scraper through the help of [jsoma's code](https://github.com/jsoma/selenium-github-actions). New CSV generated as of January 25 containing files from January 20 onwards.|
 |*Jan 20*|overhauled the file to upload a Python file for auto scraping purposes; removed the analysis part and activated an auto-scraper every Sunday| 
 
 # How to use this?
