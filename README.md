@@ -6,7 +6,16 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 # Recent updates
 |column name|definition|
 |---|---|
+|*Jan 24*|resolved issues on scraper through the help of [https://github.com/jsoma/selenium-github-actions](jsoma's code). New CSV generated as of January 25 containing files from January 20 onwards.|
 |*Jan 20*|overhauled the file to upload a Python file for auto scraping purposes; removed the analysis part and activated an auto-scraper every Sunday| 
+
+# How to use this?
+
+Follow the steps below, but an additional note: the site removes old data periodically so it's possible that even with auto-scraper, you would not get older 
+requests. To avoid the risk of overwriting older CSVs generated, I suggest that CSV's be saved everytime the scraper runs (while I figure out how to generate new
+CSVs in pandas whenever files are saved. 
+
+As an example: **foi1.csv** contains scraped data from December 7 to January 17. But **foi2.csv** contains only from January 20 to 25.
 
 # What is this?
 
