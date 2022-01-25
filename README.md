@@ -67,7 +67,8 @@ The following information were scraped from the website:
 |**date**|date when request was made through the FOI portal|  
 |**period_covered**|a required information when filing a request meant to serve as filter for the extent of period covered by each request|
 |**purpose**|the purpose why the request is being made, typically indicating how the data will be used. This is required when filing an FOI request|     
-|**link**|hyperlink to each FOI request, containing details and direct messages between the filer and agency concerned|
+|**link**|hyperlink to each FOI request, containing details and direct messages between the filer and agency concerned. Only available for data from December 7, 2021|
+|**reasons_denial**|a brief reason cited for a denial of request. Only available for data from 2016-December 31, 2021|
 
 # Next steps
 
