@@ -83,37 +83,18 @@ driver.get("https://www.foi.gov.ph/requests")
 tabs = driver.find_elements(By.CLASS_NAME, "col-xxs-12 col-xs-12 col-sm-8")
 
 
-# Used **BeautifulSoup** on this part just because I want to clearly see the elements I need to **isolate**.
-
-# In[4]:
-
-
-my_url = "https://www.foi.gov.ph/requests"
-foi_html = requests.get(my_url).content
-#print(type(foi_html))
-#print(foi_html)
-
-#foi_list = BeautifulSoup(foi_html, "html.parser")
-#print(type(foi_list))
-#print(foi_list.prettify())
-
-
 # ## Actual scraping
 
 # Now comes the main part: interacting with the pages and setting Selenium to scrape each page. We then put scraped information in a **list of dictionaries** and then into a **single data frame.** 
 # 
 # Kudos to my friend, Vincent, for some help in using **CSS_SELECTOR** as a locator since I'm not familiar with it.
 
-# In[5]:
+# In[4]:
 
 
 dataset = []
 while True:
     try:
-        print('Reading a page')
-        WebDriverWait(driver, 4).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, ".col-xxs-12.col-xs-12.col-sm-8"))
-        )
         tabs = driver.find_elements(By.CSS_SELECTOR, ".col-xxs-12.col-xs-12.col-sm-8")
         for tab in tabs:
             try:
@@ -148,14 +129,14 @@ while True:
 # 
 # First, the **ALL REQUESTS** tab apparently only contains data for about the past 40 or so days (in this case from **December 7, 2021**). Hence, we can only scrape until that level-- that represent only or **about 6%** of what the website says as **"93,373 requests"**.
 
-# In[6]:
+# In[5]:
 
 
 df = pd.DataFrame(dataset)
 df
 
 
-# In[7]:
+# In[6]:
 
 
 df.to_csv("foi2.csv", index=False)
