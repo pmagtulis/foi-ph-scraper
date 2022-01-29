@@ -9,11 +9,10 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 
 # How to use this?
 
-Follow the steps below, but an additional note: the site removes old data periodically so it's possible that even with auto-scraper, you would not get older 
-requests. To avoid the risk of overwriting older CSVs generated, I suggest that CSV's be saved everytime the scraper runs (while I figure out how to generate new
-CSVs in pandas whenever files are saved. 
+Follow the steps below. Each run of the autoscraper saves a new CSV file. This was intentionally done because the website periodically removes older data. With this
+code, we are able to keep older scraped data without the risk of overwriting the CSV file.
 
-Currently, **foi(2016-Jan20).csv** contains scraped data from stipulated period. But **foi2.csv** contains only from January 20 to 25.
+Currently, **foi(2016-Jan20).csv** contains scraped data from stipulated period. But the other CSV contains only from January 20 to 29.
 
 # What is this?
 
