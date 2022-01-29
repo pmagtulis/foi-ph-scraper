@@ -17,7 +17,7 @@ Currently, **foi(2016-Jan20).csv** contains scraped data from stipulated period.
 # What is this?
 
 This code scrapes requests data from the Philippines' [Freedom of Information website](www.foi.gov.ph). We use a Python code as well to automatically scrape the
-website for new information **every Sunday** and saves that new file into a CSV **(this component currently being debugged)**.
+website for new information **every Sunday**.
 
 The goal is to create a single database of these requests in a data frame and make some analysis out of them such as:
 
@@ -48,9 +48,7 @@ the contents of the tab labeled "ALL REQUESTS." Below is a screenshot of that pa
 
 2. We put all scraped information in a single data frame for processing through pandas.
 
-3. We made some initial analysis while the project is constantly **evolving and being developed.**
-
-4. Raw scraped files are then saved into CSV format.
+3. Raw scraped files are then saved into CSV format.
 
 # Definition of terms
 
@@ -69,14 +67,13 @@ The following information were scraped from the website:
 
 # Next steps
 
-1. After running this code and getting the latest requests information from the FOI website, the entire file is saved into a CSV format. 
+1. After running this code and getting the latest requests information from the FOI website, they are stored in a single file, CSV format. 
 
-2. Proceed to the next notebook titled "foi-analysis" for next steps: including merging the data with older ones from another CSV file, courtesy of the PCOO,
-which manages the website. The PCOO said they sometimes older remove requests data from the FOI website at the request of the filer. **It was not clear however
-if the agency also conducts regular cleaning of the portal to remove aging files.**
+2. Proceed to the next notebook titled **"foi-analysis"** for next steps: including merging and cleaning the data with older ones from another CSV file, courtesy of 
+the PCOO, which manages the website. The PCOO said they sometimes older remove requests data from the FOI website at the request of the filer. **It was not clear 
+however if the agency also conducts regular cleaning of the portal to remove aging files.**
 
-3. As a result of limited data in the website, the message below appears upon reaching the end of the **"ALL REQUESTS"** tab which is the portion of the 
-site scraped. The code is designed not to break even after this.
+3. As a result of limited data in the website, the message below appears upon reaching the end of the **"ALL REQUESTS"** tab. The code is designed not to break even upon reaching this part of the website.
 
 <img width="1200" alt="Screen Shot 2022-01-13 at 4 51 14 PM" src="https://user-images.githubusercontent.com/87161563/149607477-4a973191-86a5-4e68-8dfa-737bb1993697.png">
 
