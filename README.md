@@ -12,7 +12,7 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 Follow the steps below. Each run of the autoscraper saves a new CSV file. This was intentionally done because the website periodically removes older data. With this
 code, we are able to keep older scraped data without the risk of overwriting the CSV file.
 
-Currently, **foi(2016-Jan20).csv** contains scraped data from stipulated period. But the other CSV contains only from January 20 to 29.
+Currently, **foi(2016-Jan20).csv** contains scraped data from stipulated period. But the other CSV contains only from January 20 onwards.
 
 # What is this?
 
