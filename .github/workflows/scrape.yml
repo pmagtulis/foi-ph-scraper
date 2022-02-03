@@ -15,13 +15,8 @@ jobs:
           python-version: '3.9'
       - name: Install software
         run: sudo apt-get install -y chromium-browser
-      - name: Upgrade browser
-        run: |
-          sudo apt-get update
-          sudo apt-get --only-upgrade install google-chrome-stable
-          google-chrome --version
       - name: Install all necessary packages
-        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium regex chromedriver-py==98.0.4758.48
+        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium regex
       - name: Run the scraping script
         run: python autoscraper.py
       - name: Commit and push if content changed
