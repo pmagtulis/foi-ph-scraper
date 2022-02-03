@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[4]:
 
 
 import pandas as pd
 
 import time
 import re
+
+import warnings
+warnings.filterwarnings("ignore")
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
