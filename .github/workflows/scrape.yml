@@ -18,8 +18,7 @@ jobs:
       - name: Test
         run: |
           sudo apt-get update
-          sudo apt-get --only-upgrade install google-chrome-stable
-          google-chrome --version
+          sudo apt-get install libsqlite3-dev chromium-driver google-chrome-stable
       - name: Install all necessary packages
         run: pip install requests beautifulsoup4 pandas webdriver-manager selenium regex chromedriver-py==98.0.4758.48
       - name: Run the scraping script
