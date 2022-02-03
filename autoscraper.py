@@ -85,5 +85,5 @@ df
 timestr = time.strftime("%Y%m%d-%H%M%S")
 datamatrix= [[1,2,3],[1,2,3],[1,2,3]]
 x=pd.DataFrame(datamatrix)  
-df.to_csv(fr'foi{timestr}.csv',encoding="utf-8", index=False, header=True)
+df.to_csv(output/fr'foi{timestr}.csv',encoding="utf-8", index=False, header=True)
 
