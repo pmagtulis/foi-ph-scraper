@@ -4,15 +4,17 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 # Recent updates
 |column name|definition|
 |---|---|
+|*Feb 4*|latest amendments scrape first 3,000 entries from the FOI website to avoid overloading. This was after the FOI website put back up older requests that date back to 2016, which were already removed from the site before.|
 |*Jan 24*|resolved issues on scraper through the help of [jsoma's code](https://github.com/jsoma/selenium-github-actions). New CSV generated as of January 25 containing files from January 20 onwards.|
 |*Jan 20*|overhauled the file to upload a Python file for auto scraping purposes; removed the analysis part and activated an auto-scraper every Sunday| 
 
 # How to use this?
 
-Follow the steps below. Each run of the autoscraper saves a new CSV file. This was intentionally done because the website periodically removes older data. With this
-code, we are able to keep older scraped data without the risk of overwriting the CSV file.
+Follow the steps below. Each run of the autoscraper saves a new CSV file that contains 3,000 new entries from the FOI website. Since the website arranges requests
+by latest date, it essentially scrapes new requests everytime it runs, with some allowance for older ones for merging purposes.
 
-Currently, **foi(2016-Jan20).csv** contains scraped data from stipulated period. But the other CSV contains only from January 20 onwards.
+Each CSV file is saved on the **output** directory. Download each CSV file and use them at the [foi-analysis](https://github.com/pmagtulis/foi-analysis) repository 
+for processing. 
 
 # What is this?
 
@@ -72,10 +74,6 @@ The following information were scraped from the website:
 2. Proceed to the next notebook titled **"foi-analysis"** for next steps: including merging and cleaning the data with older ones from another CSV file, courtesy of 
 the PCOO, which manages the website. The PCOO said they sometimes older remove requests data from the FOI website at the request of the filer. **It was not clear 
 however if the agency also conducts regular cleaning of the portal to remove aging files.**
-
-3. As a result of limited data in the website, the message below appears upon reaching the end of the **"ALL REQUESTS"** tab. The code is designed not to break even upon reaching this part of the website.
-
-<img width="1200" alt="Screen Shot 2022-01-13 at 4 51 14 PM" src="https://user-images.githubusercontent.com/87161563/149607477-4a973191-86a5-4e68-8dfa-737bb1993697.png">
 
 # Contact
 
