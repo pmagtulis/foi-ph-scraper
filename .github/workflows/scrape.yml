@@ -13,10 +13,8 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
-#      - name: Install software
-#        run: sudo apt-get install -y chromium-browser
       - name: Install all necessary packages
-        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium regex
+        run: pip install requests beautifulsoup4 pandas webdriver-manager selenium regex chromedriver-py==98.0.4758.48
       - name: Run the scraping script
         run: python autoscraper.py
       - name: Commit and push if content changed
