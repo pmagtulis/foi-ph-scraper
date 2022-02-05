@@ -66,7 +66,13 @@ while True:
     driver.find_element(By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a").click()
 
 
-# In[8]:
+# In[ ]:
+
+
+df = pd.DataFrame(dataset)
+
+
+# In[ ]:
 
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
