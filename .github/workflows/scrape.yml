@@ -26,7 +26,7 @@ jobs:
           source-directory: foi-ph-scraper
           destination-github-username: 'pmagtulis'
           destination-repository-name: 'foi-analysis'
-          user-email: prinzmagtulis@gmail.com
+          user-email: carles3@pina.cat
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-directory: 'output'
           target-branch: main
