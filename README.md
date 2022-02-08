@@ -13,7 +13,8 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 Follow the steps below. Each run of the autoscraper saves a new CSV file that contains 3,000 new entries from the FOI website. Since the website arranges requests
 by latest date, it essentially scrapes new requests everytime it runs, with some allowance for older ones for merging purposes.
 
-Download each CSV file, and combine them with the larger dataset found at [foi-analysis](https://github.com/pmagtulis/foi-analysis) repository for processing. 
+Download each CSV file from the **output** directory, and combine them with the larger dataset found at [foi-analysis](https://github.com/pmagtulis/foi-analysis) 
+repository for processing. 
 
 # What is this?
 
