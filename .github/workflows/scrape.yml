@@ -33,7 +33,8 @@ jobs:
         with:
           source-directory: output/
           destination-github-username: 'pmagtulis'
-          destination-repository-name: 'foi-analysis/output/'
+          destination-repository-name: 'foi-analysis'
+          destination-directory: output/
           user-email: carles3@pina.cat
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: main
