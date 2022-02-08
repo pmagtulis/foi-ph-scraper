@@ -25,3 +25,15 @@ jobs:
           timestamp=$(date -u)
           git commit -m "Latest data: ${timestamp}" || exit 0
           git push
+      - name: Pushes to another repository
+        id: push_directory
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: output/
+          destination-github-username: 'pmagtulis'
+          destination-repository-name: 'foi-analysis/output'
+          user-email: carles3@pina.cat
+          commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+          target-branch: main
