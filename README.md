@@ -4,6 +4,7 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 # Recent updates
 |column name|definition|
 |---|---|
+|*Feb 8*|linked this repositoryto directly push newly scraped information into [foi-analysis](https://github.com/pmagtulis/foi-analysis) repository for analysis|
 |*Feb 4*|latest amendments scrape first 3,000 entries from the FOI website to avoid overloading. This was after the FOI website put back up older requests that date back to 2016, which were already removed from the site before.|
 |*Jan 24*|resolved issues on scraper through the help of [jsoma's code](https://github.com/jsoma/selenium-github-actions). New CSV generated as of January 25 containing files from January 20 onwards.|
 |*Jan 20*|overhauled the file to upload a Python file for auto scraping purposes; removed the analysis part and activated an auto-scraper every Sunday| 
@@ -43,14 +44,14 @@ public disclosures.
 
 # The process
 
-1. Using Selenium, we scraped one part of the FOI website which contains a live list of [requests](www.foi.gov.ph/requests). We specifically scraped 
+1. Using Selenium, we scrape 3,000 requests from the FOI website which contains a live list of [requests](www.foi.gov.ph/requests). We specifically scrape 
 the contents of the tab labeled "ALL REQUESTS." Below is a screenshot of that page and an example of how each requests data is structured:
 
 <center><img width="681" alt="Screen Shot 2022-01-15 at 6 31 50 PM" src="https://user-images.githubusercontent.com/87161563/149641061-726ec0c6-1f68-4ddc-b4a5-ad01f4e132f5.png"></center>
 
 2. We put all scraped information in a single data frame for processing through pandas.
 
-3. Raw scraped files are then saved into CSV format.
+3. Raw scraped files are then saved into CSV format with a unique file name every Sunday.
 
 # Definition of terms
 
