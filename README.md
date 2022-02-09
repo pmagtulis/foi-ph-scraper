@@ -54,7 +54,7 @@ the contents of the tab labeled "ALL REQUESTS." Below is a screenshot of that pa
 3. Raw scraped files are then saved into CSV format with a unique file name every Sunday.
 
 4. The .yml file contains an automated push of the scraped file to the **foi-analysis** repository under the **output** directory. For that part of the code to
-work, you would need to create a similar repository and directory, or you can just simply delete that part and just clone my [repository](https://github.com/pmagtulis/foi-analysis) analyzing the FOI requests data. Everything should be in tere.
+work, you would need to create a similar repository and directory, or you can just simply delete that part and just clone my [repository](https://github.com/pmagtulis/foi-analysis) analyzing the FOI requests data. Everything should be in there.
 
 # Definition of terms
 
