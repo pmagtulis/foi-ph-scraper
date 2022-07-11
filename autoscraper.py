@@ -20,7 +20,7 @@ from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+#chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
 
