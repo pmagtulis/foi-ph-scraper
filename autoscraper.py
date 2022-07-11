@@ -12,29 +12,49 @@ import re
 import warnings
 warnings.filterwarnings("ignore")
 
+#from selenium import webdriver
+
+# from webdriver_manager.chrome import ChromeDriverManager
+# from webdriver_manager.core.utils import ChromeType
+# from selenium.webdriver.chrome.options import Options
+
+
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.service import Service as ChromiumService
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.utils import ChromeType
+from selenium.webdriver.common.by import By
 
-# chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
-driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install
+chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
 
 
-#driver = webdriver.Chrome(service=Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--window-size=1920,1200')
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--disable-extensions')
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument('--ignore-certificate-errors')
+#driver = webdriver.Chrome(chrome_options=chrome_options)
 
-chrome_options = Options()
-options = [
-    "--headless",
-    "--disable-gpu",
-    "--window-size=1920,1200",
-    "--ignore-certificate-errors",
-    "--disable-extensions",
-    "--no-sandbox",
-    "--disable-dev-shm-usage"
-]
-for option in options:
-    chrome_options.add_argument(option)
+
+# chrome_options = options()
+# options = [
+#     "--headless",
+#     "--disable-gpu",
+#     "--window-size=1920,1200",
+#     "--ignore-certificate-errors",
+#     "--disable-extensions",
+#     "--no-sandbox",
+#     "--disable-dev-shm-usage"
+# ]
+# for option in options:
+#     chrome_options.add_argument(option)
+
+#driver = webdriver.Chrome(chrome_options=chrome_options)
 
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
