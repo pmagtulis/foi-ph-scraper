@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[5]:
+# In[17]:
 
 
 import pandas as pd
@@ -13,59 +13,42 @@ import warnings
 warnings.filterwarnings("ignore")
 
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.chrome.service import Service as ChromiumService
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
-from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 
-#chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
-driver = webdriver.Chrome(service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()))
+chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
-
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--window-size=1920,1200')
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--disable-gpu')
-chrome_options.add_argument('--disable-extensions')
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument('--ignore-certificate-errors')
-#driver = webdriver.Chrome(chrome_options=chrome_options)
-
-
-# chrome_options = options()
-# options = [
-#     "--headless",
-#     "--disable-gpu",
-#     "--window-size=1920,1200",
-#     "--ignore-certificate-errors",
-#     "--disable-extensions",
-#     "--no-sandbox",
-#     "--disable-dev-shm-usage"
-# ]
-# for option in options:
-#     chrome_options.add_argument(option)
-
-#driver = webdriver.Chrome(chrome_options=chrome_options)
+chrome_options = Options()
+options = [
+    "--headless",
+    "--disable-gpu",
+    "--window-size=1920,1200",
+    "--ignore-certificate-errors",
+    "--disable-extensions",
+    "--no-sandbox",
+    "--disable-dev-shm-usage"
+]
+for option in options:
+    chrome_options.add_argument(option)
 
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
 
-# In[2]:
+# In[5]:
 
 
 driver.get("https://www.foi.gov.ph/requests")
 
 
-# In[3]:
+# In[6]:
 
 
 dataset = []
 while True:
     all_div = driver.find_elements(By.CSS_SELECTOR, ".mb10")
-    if len(dataset) >= 3000:
+    if len(dataset) >= 5000:
         break
     for div in all_div:
         data={}
@@ -81,7 +64,7 @@ while True:
     driver.find_element(By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a").click()
 
 
-# In[ ]:
+# In[7]:
 
 
 df = pd.DataFrame(dataset)
