@@ -34,7 +34,7 @@ options = [
 for option in options:
     chrome_options.add_argument(option)
 
-driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+driver = webdriver.Chrome(service=chrome_service, options=chrome_options, version_main=104)
 
 
 # In[5]:
