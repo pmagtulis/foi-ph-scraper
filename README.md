@@ -4,11 +4,9 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 # Recent updates
 |column name|definition|
 |---|---|
+|*Sept 12*|updated the GitHub actions to fix Chromium problems|
 |*Jun 14*|updated the scraper's Chromium import after three weeks of failure to scrape|
 |*Feb 8*|linked this repository to directly push newly scraped information into [foi-analysis](https://github.com/pmagtulis/foi-analysis) repository for analysis|
-|*Feb 4*|latest amendments scrape first 3,000 entries from the FOI website to avoid overloading. This was after the FOI website put back up older requests that date back to 2016, which were already removed from the site before.|
-|*Jan 24*|resolved issues on scraper through the help of [jsoma's code](https://github.com/jsoma/selenium-github-actions). New CSV generated as of January 25 containing files from January 20 onwards.|
-|*Jan 20*|overhauled the file to upload a Python file for auto scraping purposes; removed the analysis part and activated an auto-scraper every Sunday| 
 
 # How to use this?
 
