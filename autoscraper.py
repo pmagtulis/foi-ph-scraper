@@ -49,7 +49,7 @@ driver.get("https://www.foi.gov.ph/requests")
 dataset = []
 while True:
     all_div = driver.find_elements(By.CSS_SELECTOR, ".mb10")
-    if len(dataset) >= 5000:
+    if len(dataset) >= 3000:
         break
     for div in all_div:
         data={}
