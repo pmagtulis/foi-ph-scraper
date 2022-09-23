@@ -38,7 +38,7 @@ for option in options:
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
 
-# In[5]:
+# In[3]:
 
 
 driver.get("https://www.foi.gov.ph/requests")
@@ -51,6 +51,7 @@ dataset = []
 while True:
     WebDriverWait(driver, 4).until(
         EC.presence_of_element_located((By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a"))
+    )
     all_div = driver.find_elements(By.CSS_SELECTOR, ".mb10")
     if len(dataset) >= 3000:
         break
