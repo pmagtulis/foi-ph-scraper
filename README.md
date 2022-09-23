@@ -4,13 +4,12 @@ An automatic scraper for the Freedom of Information portal of the Philippine gov
 # Recent updates
 |column name|definition|
 |---|---|
+|*Sept 23*|now scrapes every 3 days|
 |*Sept 12*|updated the GitHub actions to fix Chromium problems|
-|*Jun 14*|updated the scraper's Chromium import after three weeks of failure to scrape|
-|*Feb 8*|linked this repository to directly push newly scraped information into [foi-analysis](https://github.com/pmagtulis/foi-analysis) repository for analysis|
 
 # How to use this?
 
-Follow the steps below. Each run of the autoscraper saves a new CSV file that contains 3,000 new entries from the FOI website. Since the website arranges requests
+Follow the steps below. Each run of the autoscraper saves a new CSV file that contains 2,000 new entries from the FOI website. Since the website arranges requests
 by latest date, it essentially scrapes new requests everytime it runs, with some allowance for older ones for merging purposes.
 
 Download each CSV file from the **output** directory, and combine them with the larger dataset found at [foi-analysis](https://github.com/pmagtulis/foi-analysis) 
@@ -19,7 +18,7 @@ repository for processing.
 # What is this?
 
 This code scrapes requests data from the Philippines' [Freedom of Information website](www.foi.gov.ph). We use a Python code as well to automatically scrape the
-website for new information **every Sunday**.
+website for new information **every three days**.
 
 The goal is to create a single database of these requests in a data frame and make some analysis out of them such as:
 
