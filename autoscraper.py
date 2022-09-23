@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[17]:
+# In[2]:
 
 
 import pandas as pd
@@ -15,6 +15,7 @@ warnings.filterwarnings("ignore")
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -48,6 +49,8 @@ driver.get("https://www.foi.gov.ph/requests")
 
 dataset = []
 while True:
+    WebDriverWait(driver, 4).until(
+        EC.presence_of_element_located((By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a"))
     all_div = driver.find_elements(By.CSS_SELECTOR, ".mb10")
     if len(dataset) >= 3000:
         break
