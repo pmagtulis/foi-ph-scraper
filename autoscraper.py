@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[7]:
 
 
 import pandas as pd
@@ -14,6 +14,7 @@ warnings.filterwarnings("ignore")
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import TimeoutException
 from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -45,7 +46,7 @@ driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 driver.get("https://www.foi.gov.ph/requests")
 
 
-# In[6]:
+# In[5]:
 
 
 dataset = []
