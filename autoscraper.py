@@ -50,24 +50,27 @@ driver.get("https://www.foi.gov.ph/requests")
 
 dataset = []
 while True:
-    WebDriverWait(driver, 8).until(
-        EC.presence_of_element_located((By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a"))
-    )
-    all_div = driver.find_elements(By.CSS_SELECTOR, ".mb10")
-    if len(dataset) >= 3000:
-        break
-    for div in all_div:
-        data={}
-        data ['agency'] = div.find_element(By.TAG_NAME, 'span').text
-        data ['date'] = div.find_element(By.TAG_NAME, 'p').get_attribute('title')
-        data ['title'] = div.find_element(By.TAG_NAME, 'h4').text
-        data ['status'] = div.find_element(By.TAG_NAME, 'label').text
-        data ['purpose'] = div.find_elements(By.TAG_NAME, 'span')[2].text
-        data ['period_covered'] = div.find_elements(By.TAG_NAME, 'span')[3].text
-        data ['link'] = div.find_element(By.TAG_NAME, 'a').get_attribute('href')
-        dataset.append(data)
-    
-    driver.find_element(By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a").click()
+    try:
+        WebDriverWait(driver, 4).until(
+            EC.presence_of_element_located((By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a"))
+        )
+    except TimeoutException:
+        driver.quit()
+        all_div = driver.find_elements(By.CSS_SELECTOR, ".mb10")
+        if len(dataset) >= 3000:
+            break
+        for div in all_div:
+            data={}
+            data ['agency'] = div.find_element(By.TAG_NAME, 'span').text
+            data ['date'] = div.find_element(By.TAG_NAME, 'p').get_attribute('title')
+            data ['title'] = div.find_element(By.TAG_NAME, 'h4').text
+            data ['status'] = div.find_element(By.TAG_NAME, 'label').text
+            data ['purpose'] = div.find_elements(By.TAG_NAME, 'span')[2].text
+            data ['period_covered'] = div.find_elements(By.TAG_NAME, 'span')[3].text
+            data ['link'] = div.find_element(By.TAG_NAME, 'a').get_attribute('href')
+            dataset.append(data)
+
+        driver.find_element(By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a").click()
 
 
 # In[7]:
