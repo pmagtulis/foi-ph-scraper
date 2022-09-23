@@ -50,7 +50,7 @@ driver.get("https://www.foi.gov.ph/requests")
 
 dataset = []
 while True:
-    WebDriverWait(driver, 4).until(
+    WebDriverWait(driver, 8).until(
         EC.presence_of_element_located((By.XPATH, "/html/body/section/div/div/div/div[2]/div/div/div/a"))
     )
     all_div = driver.find_elements(By.CSS_SELECTOR, ".mb10")
