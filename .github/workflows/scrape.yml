@@ -22,7 +22,7 @@ jobs:
       - name: Get update
         run: sudo apt-get update
       - name: Install a new Chromium
-        run: sudo apt install -y chromium-browser=108
+        run: sudo apt install -y chromium-browser=108.0.5359.94
       - name: Install all necessary packages
         run: pip install requests beautifulsoup4 pandas webdriver-manager selenium regex packaging
       - name: Run the scraping script
