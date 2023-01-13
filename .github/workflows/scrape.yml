@@ -19,12 +19,12 @@ jobs:
         run: sudo apt purge google-chrome-stable
       - name: Remove default Chromium
         run: sudo apt purge chromium-browser
-      - name: Get update
-        run: sudo apt-get update
       - name: Install a new Chromium
         run: sudo apt install -y chromium-browser
       - name: Install all necessary packages
         run: pip install requests beautifulsoup4 pandas webdriver-manager selenium regex packaging
+      - name: Get update
+        run: sudo apt-get update
       - name: Run the scraping script
         run: python autoscraper.py
       - name: Commit and push if content changed
